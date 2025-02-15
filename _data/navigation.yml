@@ -5,23 +5,23 @@
 # prevent it from being included in the site.
 
 main:
-  - title: "Publications"
+  - title: "Publications & Projects"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Sharing"
+    url: /sharing/
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
+  # - title: "Writing"
+  #   url: /writing/
+
+  - title: "Writing"
     url: /year-archive/
-    
+
   - title: "CV"
-    url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/
+    url: http://kyaw-yethu.github.io/files/kyawyethu_cv.pdf
+
+  # - title: "Projects"
+  #   url: /projects/
+
+  # - title: "Guide"
+  #   url: /markdown/

@@ -11,32 +11,55 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
-
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    <div class="archive__item-container">
+      {% if teaser %}
+        <div class="archive__item-teaser">
+          <img src=
+            {% if teaser contains "://" %}
+              "{{ teaser }}"
+            {% else %}
+              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="">
+        </div>
       {% endif %}
-    </h3>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
-    </li>
- </article>
+      <div class="archive__item-content">
+        <!-- header & links  -->
+        <h3 class="archive__item-title" itemprop="headline">
+          {% if post.link %}
+            <a href="{{ post.link }}">{{ title }}</a> 
+          {% else %}
+            <p><a href="{{ post.githuburl }}" rel="permalink">{{ title }} </a> 
+                    <!-- if collection is Projects -->
+                {% if post.collection == "projects" or post.collection == "teamProjects" %}
+                    {% if post.slidesurl and post.demourl %}
+                      <a href="{{ post.slidesurl }}">[Poster]</a> | <a href="{{ post.demourl }}">[Demo]</a>
+                    {% elsif post.slidesurl %}
+                      <a href=" {{ post.slidesurl }} ">[Poster]</a>
+                    {% elsif post.demourl %}
+                      <a href="{{ post.demourl }}">[Demo]</a>
+                    {% endif %}
+                {% endif %}
+            </p>
+          {% endif %}
+        </h3>
+
+        {% if post.collection == "teaching" %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i>
+          {% if post.date %} {{ post.date | date: '%B, %Y' }}{% endif %} |
+        {% if post.venue %} {{post.type}} | {{ post.venue }} | Affiliated with {{post.organization}}{% endif %}</p>
+        {% endif %}
+        <!-- {% if post.read_time %}
+          <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+        {% endif %}
+        {% if post.venue%}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> 
+        {% endif %}-->
+          <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+        
+      </div>
+    </div>
+  </article>
 </div>
