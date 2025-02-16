@@ -15,7 +15,7 @@ main:
   #   url: /writing/
 
   - title: "Writing"
-    url: /year-archive/
+    url: /writing/
 
   - title: "CV"
     url: http://kyaw-yethu.github.io/files/kyawyethu_cv.pdf
