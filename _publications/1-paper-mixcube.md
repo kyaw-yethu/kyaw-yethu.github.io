@@ -1,16 +1,16 @@
 ---
-title: "[Under Review] WHEN TOM EATS KIMCHI:
+title: "WHEN TOM EATS KIMCHI:
 Evaluating Cultural Awareness of Multimodal Large Language Models
 in Cultural Mixture Contexts"
 collection: publications
 category: manuscripts
 permalink: 
-excerpt: 'In a highly globalized world, it is important for MLLMs to correctly recognize mixed-cultural inputs, where the elements in the input represent multiple cultures. To examine the robustness of MLLMs to mixed cultures, we introduce MixCuBe, a cross-cultural awareness benchmark, and study elements from five countries and four ethnicities.'
+excerpt: '*Received Outstanding Paper Award. In a highly globalized world, it is important for MLLMs to correctly recognize mixed-cultural inputs, where the elements in the input represent multiple cultures. To examine the robustness of MLLMs to mixed cultures, we introduce MixCuBe, a cross-cultural awareness benchmark, and study elements from five countries and four ethnicities.'
 date: 2009-10-01
 venue: 'Journal 1'
-githuburl: 'https://github.com/kyaw-yethu/MixCube_temp'
+githuburl: 'https://arxiv.org/abs/2503.16826'
 slidesurl: 
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+paperurl: 
 citation: 
 header:
     teaser: 'publication-mixcube.png' 
