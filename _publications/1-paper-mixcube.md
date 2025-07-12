@@ -1,16 +1,12 @@
 ---
-title: "WHEN TOM EATS KIMCHI:
-Evaluating Cultural Awareness of Multimodal Large Language Models
-in Cultural Mixture Contexts"
+title: "WHEN TOM EATS KIMCHI: Evaluating Cultural Awareness of Multimodal Large Language Models in Cultural Mixture Contexts"
 collection: publications
-category: manuscripts
-permalink: 
-excerpt: '*Received Outstanding Paper Award. In a highly globalized world, it is important for MLLMs to correctly recognize mixed-cultural inputs, where the elements in the input represent multiple cultures. To examine the robustness of MLLMs to mixed cultures, we introduce MixCuBe, a cross-cultural awareness benchmark, and study elements from five countries and four ethnicities.'
-date: 2009-10-01
-venue: 'Journal 1'
-githuburl: 'https://arxiv.org/abs/2503.16826'
-slidesurl: 
-paperurl: 
+authors: "Jun Seong Kim*, Kyaw Ye Thu*, Javad Ismayilzada, Junyeong Park, Eunsu Kim, Huzama Ahmad, Na Min An, James Thorne, Alice Oh"
+excerpt: 'In a highly globalized world, it is important for multi-modal language models to correctly recognize visuals in mixed-cultural settings. This paper examines the robustness of MLLMs to mixed cultures by constructing MixCuBe, a cross-cultural awareness benchmark of images and evaluating SOTA MLLMs on it.'
+date: 2025-03-01
+venue: 'Workshop on Cross-Cultural Considerations in NLP (C3NLP) @ NAACL 2025'
+awardurl: 'https://drive.google.com/file/d/1Gat0qzlafEvTtvGqp5_1MfdsS9PyOE91/view?usp=drive_link'
+paperurl: 'https://arxiv.org/abs/2503.16826'
 citation: 
 header:
     teaser: 'publication-mixcube.png' 

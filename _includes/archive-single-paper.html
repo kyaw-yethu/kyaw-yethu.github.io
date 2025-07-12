@@ -1,0 +1,58 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="archive__item-container">
+      {% if teaser %}
+        <div class="archive__item-teaser">
+          <img src=
+            {% if teaser contains "://" %}
+              "{{ teaser }}"
+            {% else %}
+              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="">
+        </div>
+      {% endif %}
+      <div class="archive__item-content">
+        <!-- header & links  -->
+        <h3 class="archive__item-title" itemprop="headline">{{ title }}</h3>
+
+        <p class="page__meta">
+          {% if post.authors %}<span class="pub-authors"><i class="fa fa-user" aria-hidden="true"></i> {{ post.authors }}</span><br>{% endif %}
+          <!-- {% if post.date %}<span class="pub-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B, %Y' }}</span><br>{% endif %} -->
+          {% if post.venue %}<span class="pub-venue"><i class="fa fa-university" aria-hidden="true"></i> {{ post.venue }}</span>{% endif %}
+        </p>
+
+        <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+
+        <div class="pub-links" style="margin-top: 0.5em;">
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" target="_blank" style="display:inline-block;padding:6px 10px;margin-right:8px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:200;vertical-align:middle;">
+              <i class="fa fa-file" aria-hidden="true" style="margin-right:6px;"></i>arXiv
+            </a>
+            <!-- <i class="fa-solid fa-file"></i> -->
+          {% endif %}
+          <a href="{{ post.awardurl }}" target="_blank" style="display:inline-block;padding:6px 10px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:200;vertical-align:middle;">
+            <i class="fa fa-award" aria-hidden="true" style="margin-right:6px;"></i>Outstanding Paper at C3NLP Workshop @ NAACL
+          </a>
+        </div>
+
+        {% if post.citation %}
+          <p class="pub-citation" style="font-size:smaller; color:#666;">{{ post.citation }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</div>
