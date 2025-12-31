@@ -1,11 +1,11 @@
 ---
-title: "Breaking into Artificial Intelligence"
+title: "KAIST Undergraduate Admission Info & Tips Sharing"
 collection: talks
 type: "Talk"
-link: "https://docs.google.com/presentation/d/1vTJstXq1G5MVKMWmFU88iJDLN5LfemnL-CZx1xJwWAc/edit?usp=sharing"
+link: "https://youtu.be/0Ly0gA8MJjU?si=9bTnsCNCm-L4riQD"
 venue: "Online"
-excerpt: "A taste of Artificial Intelligence to the general public"
-date: 2022-06-1
+excerpt: "Info & tips sharing about KAIST Undergraduate Admission intended for students from Myanmar"
+date: 2025-05-1
 location:
 organization: Simbolo
 ---
