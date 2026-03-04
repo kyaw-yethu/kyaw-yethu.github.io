@@ -25,9 +25,9 @@ author:
   avatar: "profile.png"
   name: "Kyaw Ye Thu"
   pronouns: # example: "she/her"
-  bio: "A CS undergrad with emphasis on AI and visual computing"
+  bio: ""
   location: "Daejeon, Korea"
-  employer: "KAIST (Korea Advanced Institute of Science and Technology)"
+  employer: "KAIST (Korea Advanced Institute \\ of Science and Technology)"
   uri: # URL
   email: "kyawyethu@kaist.ac.kr"
 
@@ -212,13 +212,16 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  projects:
+  engineeringProjects:
     output: true
     permalink: /:collection/:path/
-  teamProjects:
+  researchProjects:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  essays:
     output: true
     permalink: /:collection/:path/
 
@@ -268,6 +271,15 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # _essays
+  - scope:
+      path: ""
+      type: essays
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 # Sass/SCSS
 sass:

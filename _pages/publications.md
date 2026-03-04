@@ -17,16 +17,16 @@ redirect_from:
 
 # Projects
 
-The following are a few of demonstrable projects that I have implemented. If interested in more of my projects, please check out my [Github](!https://github.com/).
+The following are a few of demonstrable projects of mine listed in reverse-chronological order (i.e, the more recent, the better the quality). If interested in more of my projects, please check out my [Github](!https://github.com/).
 
-## Team Projects
+## Research Projects
 
-  <ul>{% for post in site.teamProjects reversed%}
+  <ul>{% for post in site.researchProjects reversed%}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-## Individual Projects
+## Engineering Projects
 
-  <ul>{% for post in site.projects reversed%}
+  <ul>{% for post in site.engineeringProjects reversed%}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

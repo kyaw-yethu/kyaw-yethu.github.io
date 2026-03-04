@@ -1,6 +1,6 @@
 ---
 title: "PlayMaths"
-collection: projects
+collection: engineeringProjects
 permalink:
 excerpt: "A playground where you can interact with widgets to solidify your mathematical understanding"
 githuburl: "https://github.com/kyaw-yethu/playmath"

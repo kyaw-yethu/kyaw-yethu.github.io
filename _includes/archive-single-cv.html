@@ -33,7 +33,7 @@
           {% else %}
             <p><a href="{{ post.githuburl }}" rel="permalink">{{ title }} </a> 
                     <!-- if collection is Projects -->
-                {% if post.collection == "projects" or post.collection == "teamProjects" %}
+                {% if post.collection == "engineeringProjects" or post.collection == "researchProjects" %}
                     {% if post.slidesurl and post.demourl %}
                       <a href="{{ post.slidesurl }}">[Poster]</a> | <a href="{{ post.demourl }}">[Demo]</a>
                     {% elsif post.slidesurl %}

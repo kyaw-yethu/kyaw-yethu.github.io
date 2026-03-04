@@ -6,28 +6,31 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I'm Kyaw Ye Thu, a Burmese 🇲🇲 boy pursuing educational and personal growth in Korea 🇰🇷 currently as an undergrad student in [KAIST](https://kaist.ac.kr/kr/). Majoring in computer science and minoring in BTM (business and technology management), I am into the final semester of my Bachelor degree by 2026 Spring.  
+I'm Kyaw Ye Thu, a final-year undergraduate student at [Korea Advanced Institute of Science and Technology (KAIST)](https://kaist.ac.kr/kr/) in the School of Computing. I grew up in a lovely country, Myanmar, and moved to Korea to pursue higher education in Korea in 2022. 
 
-Broadly speaking, my main research focuses are computer graphics and computer vision though I'm also fascinated by machine cognition (for AGI) and computer architecture (especially about GPU and TPU). For example,
+My **research interests** span two realms primarily, visual computing and physical AI, with the latter informed by the former. 
 
-1. **Computer Graphics**⛰️: _How do we reconstruct a 3D scene obeying physics directly from a sparse set of input images? ..._
-2.  **Computer Vision**👁️: _How do we enable machines to understand a large video? What applications are possible given access to a lot of videos? ..._
+1. **Visual Computing**: I am gravitated towards computer graphics, from various rendering techniques to 3D scene reconstruction consistent in appearance, geometry, and physics.
+2.  **Physical AI**: I am particularly interested in training agents to perceive, plan, and act within 3D spaces and creating systems (eg. simulators) for enabling such.
 
-I've conducted research about evaluating cultural awareness in multi-modal large language model (MLLM) at [U&I Lab](https://uilab.kr/) (KAIST) and developed IoT devices for smart agriculture at [Axinvent](https://www.axinvent.com/). 
+Outside my study, I used to teach teenagers from Myanmar about programming and artificial intelligence with [Thate Pan Hub](https://thatepanhub.org/). I am now offering free concelling sessions for KAIST admissions with [The Hook](https://chatethehook.com/). 
 
-Outside my nerdy interests, I can be simultaneously atheletic and nerdy (if I say so myself). I love doing everything related to football⚽ and playing story-driven RPGs🎮. Story telling whether through a video, a game or a theatrical performance🎭 is an art that deeply captivates me. I always wanted to be involved, as a director or an actor, in some sort of narrative projects that tell powerful stories. 
+I love doing everything related to football⚽ and playing story-driven RPGs🎮 (The Witcher 3, Oh my!). Story telling whether through a video, a game or a theatrical performance🎭 is an art that deeply captivates me. I always wanted to be involved, as a director or an actor, in some sort of narrative projects that tell powerful stories. 
 
-Reach out to me if you want to find ways to work with me together, whether about a software product, a research topic, a social initiative or maybe a story!
+Feel free to reach me out if you want to find ways to work with me together!
 
 ## Education
 
-- 🎓BS in Computer Science and Engineering, 2026 (Expected) \\
+- 🎓BS in Computer Science, 2027 Feb (Expected) \\
+  (Minor in Business and Technology Management) \\
   _KAIST, Korea_
 
 ## Work Experience
+- 🔬Student Researcher (January 2026 - Present) \\
+  _Advised by Prof [Sungeui Yoon](https://sgvr.kaist.ac.kr/~sungeui/), [SGVR Lab](https://sgvr.kaist.ac.kr/), KAIST_
 
-- 🔬IoT & AI Research Intern (June 2025 - Present) \\
+- 🔬IoT & AI Engineering Intern (June 2025 - Dec 2025) \\
   _Axinvent, Korea_
 
 - 🔬Student Researcher (Aug 2024 - Feb 2025) \\
-  _[U&I Lab](https://uilab.kr/), School of Computing, KAIST, Korea_
+  _Advised by Prof [Alice Oh](https://aliceoh9.github.io/), [U&I Lab](https://uilab.kr/), KAIST_

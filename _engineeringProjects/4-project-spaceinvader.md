@@ -1,6 +1,6 @@
 ---
 title: "Space Invader"
-collection: projects
+collection: engineeringProjects
 permalink:
 excerpt: "A classic arcade style 2D shooting game wherein the player spaceship shoots at the enemies and bosses while avoiding their attacks."
 githuburl: "https://github.com/kyaw-yethu/space_invader"
