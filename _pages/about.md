@@ -8,10 +8,10 @@ redirect_from:
 ---
 I'm Kyaw Ye Thu, a final-year undergraduate student at [Korea Advanced Institute of Science and Technology (KAIST)](https://kaist.ac.kr/kr/) in the School of Computing. I grew up in a lovely country, Myanmar, and moved to Korea to pursue higher education in Korea in 2022. 
 
-My **research interests** span two realms primarily, visual computing and physical AI, with the latter informed by the former. 
+My research interests span two realms primarily, Computer Graphics and Physical AI, with the latter informed by the former.
 
-1. **Visual Computing**: I am gravitated towards computer graphics, from various rendering techniques to 3D scene reconstruction consistent in appearance, geometry, and physics.
-2.  **Physical AI**: I am particularly interested in training agents to perceive, plan, and act within 3D spaces and creating systems (eg. simulators) for enabling such.
+Computer Graphics📷: Various rendering techniques, 3D scene reconstruction consistent in appearance, geometry, and physics
+Physical AI🦾: Training agents to perceive, plan, and act within 3D spaces, Building systems (eg. simulators) for enabling such
 
 Outside my study, I used to teach teenagers from Myanmar about programming and artificial intelligence with [Thate Pan Hub](https://thatepanhub.org/). I am now offering free concelling sessions for KAIST admissions with [The Hook](https://chatethehook.com/). 
 
