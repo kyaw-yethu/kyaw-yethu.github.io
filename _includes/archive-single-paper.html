@@ -49,6 +49,11 @@
             <i class="fa fa-award" aria-hidden="true" style="margin-right:6px;"></i>Outstanding Paper Award at C3NLP Workshop @ NAACL
           </a>
           {% endif %}
+          {% if post.websiteurl %}
+          <a href="{{ post.websiteurl }}" target="_blank" style="display:inline-block;padding:6px 10px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:200;vertical-align:middle;">
+            <i class="fa fa-globe" aria-hidden="true" style="margin-right:6px;"></i>Website 
+          </a>
+          {% endif %}
         </div>
 
         {% if post.citation %}
