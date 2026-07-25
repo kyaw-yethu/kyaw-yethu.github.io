@@ -1328,9 +1328,20 @@ Expected: lockfile created/updated. (It is currently git-ignored — remove the 
 
 Edit `.gitignore`: delete the `package-lock.json` line. `git add .gitignore package-lock.json`.
 
+- [ ] **Step 4a: Add ambient YAML module declaration** (so `astro check` resolves `import x from '*.yaml'`)
+
+Create `src/yaml.d.ts`:
+
+```ts
+declare module '*.yaml' {
+  const value: any;
+  export default value;
+}
+```
+
 - [ ] **Step 4: Run the launch checklist (fix each)**
 
-- [ ] `npm run check` passes (no TS/content errors).
+- [ ] `npm run check` passes (no TS/content errors — after Step 4a and after Task 11 removed `vendor/`).
 - [ ] `npm test` passes.
 - [ ] Real **LinkedIn URL** set in `src/data/site.yaml`.
 - [ ] Any **placeholder dates** in `sharing`/`writing` replaced with real ones.
