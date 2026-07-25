@@ -1,0 +1,10 @@
+---
+const { kind } = Astro.props;
+const label = kind === 'blog' ? 'Blog' : 'Essay';
+---
+<span class:list={["wtag", kind]}>{label}</span>
+<style>
+  .wtag{display:inline-block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:2px 9px;border-radius:20px;vertical-align:middle}
+  .wtag.blog{background:rgba(43,138,148,.12);color:var(--accent)}
+  .wtag.essay{background:rgba(176,82,46,.12);color:#a8471f}
+</style>

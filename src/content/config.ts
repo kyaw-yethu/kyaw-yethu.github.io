@@ -33,6 +33,7 @@ const writing = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
+    kind: z.enum(['blog', 'essay']),
     excerpt: z.string().optional(),
   }),
 });

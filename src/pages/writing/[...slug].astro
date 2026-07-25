@@ -9,6 +9,6 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
-<Post title={post.data.title} date={fmt(post.data.date)}>
+<Post title={post.data.title} date={fmt(post.data.date)} kind={post.data.kind}>
   <Content />
 </Post>

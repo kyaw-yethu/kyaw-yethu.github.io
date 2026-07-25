@@ -2,17 +2,20 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { sortNewestFirst } from '../../lib/ordering';
+import WritingTag from '../../components/WritingTag.astro';
 const posts = sortNewestFirst(await getCollection('writing'), p => p.data.date.toISOString());
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 <Base title="Writing — Kyaw Ye Thu">
   <div class="wrap">
     <h1 style="font-size:30px;padding:52px 0 0">Writing</h1>
-    <section style="margin-top:20px">
+    <p class="intro">I write a blog post only when there is an idea or a phenomenon that manages to occupy my mind for quite some time and I feel the need to articulate it in a more structured way. The essays are written for humanities courses I took at KAIST. Being academic essays, they deviate from the conversational style as manifest in my blog posts, but my opinions and interpretation are not less emphasized.</p>
+    <section style="margin-top:12px">
       {posts.map((p) => (
         <a class="post-row" href={`/writing/${p.slug}`}>
           <div class="pr-date">{fmt(p.data.date)}</div>
           <div class="pr-title">{p.data.title}</div>
+          <div class="pr-tag"><WritingTag kind={p.data.kind} /></div>
           {p.data.excerpt && <div class="pr-ex">{p.data.excerpt}</div>}
         </a>
       ))}
@@ -20,8 +23,10 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month:
   </div>
 </Base>
 <style>
+  .intro{font-size:14px;line-height:1.75;color:#4a463e;max-width:64ch;margin:16px 0 4px}
   .post-row{display:block;padding:18px 0;border-bottom:1px solid var(--line);color:var(--ink)}
   .pr-date{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .pr-title{font-size:17px;font-weight:700;margin:4px 0}
+  .pr-tag{margin:2px 0 4px}
   .pr-ex{font-size:12.5px;color:#5a564e}
 </style>

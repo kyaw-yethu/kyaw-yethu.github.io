@@ -1,18 +1,20 @@
 ---
 import Base from './Base.astro';
-const { title, date } = Astro.props;
+import WritingTag from '../components/WritingTag.astro';
+const { title, date, kind } = Astro.props;
 ---
 <Base title={`${title} — Kyaw Ye Thu`}>
   <article class="wrap post">
     <h1>{title}</h1>
-    <div class="date">{date}</div>
+    <div class="meta"><span class="date">{date}</span>{kind && <WritingTag kind={kind} />}</div>
     <div class="body"><slot /></div>
   </article>
 </Base>
 <style>
   .post{padding:52px 0}
   .post h1{font-size:30px;margin:0 0 8px}
-  .date{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:26px}
+  .meta{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+  .date{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .body{font-size:15px;line-height:1.8;color:#2e2b26}
   .body :global(h2){font-size:20px;margin:28px 0 8px}
   .body :global(p){margin:0 0 16px}

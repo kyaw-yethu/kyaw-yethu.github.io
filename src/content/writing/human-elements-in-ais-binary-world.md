@@ -1,6 +1,7 @@
 ---
 title: "Human Elements in AI’s Binary World"
 date: 2024-08-22
+kind: blog
 excerpt: "Can AI ever understand human emotions the way we do, or will it always be a hollow imitation of empathy? This piece explores human touch in AI and the ethical dilemmas emerged."
 ---
 

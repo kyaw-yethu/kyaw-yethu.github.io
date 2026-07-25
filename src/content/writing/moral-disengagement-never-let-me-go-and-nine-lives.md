@@ -1,6 +1,7 @@
 ---
 title: "Analyzing Moral Disengagement in Never Let Me Go and Nine Lives through Political and Economic Lens"
 date: 2024-12-21
+kind: essay
 excerpt: "When ethics clash with necessity, people create justifications to ease their guilt. Through the lens of human cloning, Never Let Me Go and Nine Lives expose how moral disengagement shapes society."
 ---
 
