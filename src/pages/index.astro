@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import SpaceToWrite from '../components/SpaceToWrite.astro';
 import NewsRail from '../components/NewsRail.astro';
 import ResearchItem from '../components/ResearchItem.astro';
+import ExperienceTimeline from '../components/ExperienceTimeline.astro';
 import { getCollection } from 'astro:content';
 import { sortNewestFirst } from '../lib/ordering';
 
@@ -33,6 +34,6 @@ const featured = sortNewestFirst(
       {featured.map((it) => <ResearchItem {...it} />)}
     </section>
     <p style="text-align:center;margin:14px 0 0"><a href="/research" style="font-size:11px;letter-spacing:.07em;text-transform:uppercase">All research →</a></p>
+    <ExperienceTimeline />
   </div>
 </Base>
-<!-- Experience timeline is added in Task 8 (after this section). -->

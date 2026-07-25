@@ -1,0 +1,42 @@
+---
+import experience from '../data/experience.yaml';
+import { sortNewestFirst, assignTimelineSides } from '../lib/ordering';
+const items = assignTimelineSides(sortNewestFirst(experience, (e) => e.date));
+---
+<div class="shead"><span class="slabel">Experience</span></div>
+<div class="tl">
+  {items.map((e) => (
+    <div class:list={["tl-item", e.side]}>
+      <div class="tl-node"></div>
+      <div class="tl-c">
+        <div class="tl-head">
+          {e.side === 'left'
+            ? (<><span class="tl-date">{e.dates}</span><span class="tl-inst">{e.institution}</span></>)
+            : (<><span class="tl-inst">{e.institution}</span><span class="tl-date">{e.dates}</span></>)}
+        </div>
+        <div class="tl-role"><b>{e.role}</b><br /><span>{e.detail}</span></div>
+      </div>
+    </div>
+  ))}
+</div>
+<style>
+  .tl{position:relative;margin:28px 0 10px;padding:6px 0}
+  .tl:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#cfc9bf;transform:translateX(-1px)}
+  .tl-item{position:relative;padding:13px 0;min-height:50px}
+  .tl-node{position:absolute;left:50%;top:17px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--accent);transform:translateX(-50%);z-index:2}
+  .tl-c{width:50%}
+  .tl-item.right .tl-c{margin-left:50%;padding-left:32px;text-align:left}
+  .tl-item.left .tl-c{margin-right:50%;padding-right:32px;text-align:right}
+  .tl-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .tl-item.left .tl-head{justify-content:flex-end}
+  .tl-inst{font-size:13.5px;font-weight:700;background:#fff;border:1px solid var(--line);padding:3px 10px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+  .tl-date{font-size:10px;color:var(--accent);font-weight:700;white-space:nowrap}
+  .tl-role b{font-size:12px;font-weight:700} .tl-role span{font-size:11.5px;color:#6a655c}
+  @media (max-width:720px){
+    .tl:before{left:6px}
+    .tl-node{left:6px}
+    .tl-item.left .tl-c,.tl-item.right .tl-c{width:auto;margin:0;padding-left:28px;padding-right:0;text-align:left}
+    .tl-item.left .tl-head{justify-content:flex-start}
+    .tl-item.left .tl-head{flex-direction:row-reverse;justify-content:flex-end}
+  }
+</style>
