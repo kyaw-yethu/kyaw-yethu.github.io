@@ -14,3 +14,10 @@ package-lock.json
 
 # Ignore vendor directory
 vendor/
+
+# Ignore brainstorm/visual-companion working files
+.superpowers/
+
+# Ignore Astro build artifacts
+dist/
+.astro/
