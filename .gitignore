@@ -20,3 +20,6 @@ vendor/
 # Ignore Astro build artifacts
 dist/
 .astro/
+
+# Windows/WSL zone identifier artifacts
+*:Zone.Identifier
