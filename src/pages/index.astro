@@ -9,8 +9,6 @@ import { getCollection } from 'astro:content';
 import { sortNewestFirst } from '../lib/ordering';
 
 const pubs = await getCollection('publications');
-// Selected Research on the homepage shows featured PUBLICATIONS only
-// (research projects live on the /research page).
 const featured = sortNewestFirst(
   pubs.filter(p => p.data.featured).map(p => ({
     badge: `Publication · ${p.data.venue}`, title: p.data.title,

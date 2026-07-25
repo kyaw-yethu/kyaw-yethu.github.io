@@ -234,7 +234,7 @@ during transition, or remove once parity is confirmed.)
 
 1. Confirm **Lato** is the exact font in the reference (high confidence, but
    verify against `@fontsource/lato`).
-2. Portrait photo source (reuse `images/bio-photo.jpg` or a new one).
+2. Portrait photo source (reuse `images/bio-photo.png` or a new one).
 3. Whether to keep old Jekyll files in `legacy/` or remove after parity.
 4. **Sharing page content** — the resume has **no talks** but has **Social
    Contribution** (ASCEND futsal, KISA, Thate Pan Hub teaching). Decide whether

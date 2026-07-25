@@ -62,7 +62,7 @@ src/
     writing/index.astro
     writing/[...slug].astro
 public/
-  images/bio-photo.jpg   # copied from legacy images/
+  images/bio-photo.png   # copied from legacy images/
   files/kyawyethu-cv.pdf
 .github/workflows/deploy.yml
 legacy/                  # moved Jekyll tree

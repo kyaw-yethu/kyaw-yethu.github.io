@@ -13,11 +13,13 @@ import { renderInline } from '../lib/inline';
     <div class="edu">
       <div class="edulabel">Education</div>
       {education.map((e: any) => (
-        <div class="edurow"><b>{e.degree}</b> · <span>{e.place}</span><br /><span>{e.detail}</span></div>
+          <div class="edurow"><b>{e.degree}</b> <span><em>{e.time}</em></span><br /> 
+        {e.place}<br />
+        <span>{e.detail}</span></div>
       ))}
     </div>
   </div>
-  <div class="portrait"><img src="/images/bio-photo.jpg" alt="Kyaw Ye Thu" /><span>Daejeon, Korea</span></div>
+  <div class="portrait"><img src="/images/bio-photo.png" alt="Kyaw Ye Thu" /><span>Daejeon, Korea</span></div>
 </section>
 <style>
   .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;padding:52px 0 32px;align-items:start}
