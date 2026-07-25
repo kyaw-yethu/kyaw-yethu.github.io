@@ -4,5 +4,5 @@ const { label, items } = Astro.props;
 ---
 <div class="shead"><span class="slabel">{label}</span></div>
 <section>
-  {items.map((it) => <ResearchItem {...it} />)}
+  {items.map((it: any) => <ResearchItem {...it} />)}
 </section>

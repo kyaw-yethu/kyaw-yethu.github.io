@@ -2,7 +2,7 @@
 import news from '../data/news.yaml';
 import { sortNewestFirst } from '../lib/ordering';
 import { renderInline } from '../lib/inline';
-const items = sortNewestFirst(news, (n) => n.date);
+const items = sortNewestFirst(news, (n: any) => n.date);
 ---
 <div class="shead"><span class="slabel">News</span></div>
 <section class="news">

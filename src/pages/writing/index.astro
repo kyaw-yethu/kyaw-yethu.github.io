@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { sortNewestFirst } from '../../lib/ordering';
 const posts = sortNewestFirst(await getCollection('writing'), p => p.data.date.toISOString());
-const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 <Base title="Writing — Kyaw Ye Thu">
   <div class="wrap">

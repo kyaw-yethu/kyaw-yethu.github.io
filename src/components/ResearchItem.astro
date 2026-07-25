@@ -8,7 +8,7 @@ import { renderInline } from '../lib/inline';
   {authors && <div class="authors" set:html={renderInline(authors)} />}
   <div class="p">{excerpt}</div>
   {links.length > 0 && (
-    <div class="links">{links.map((l, i) => (<>{i > 0 && ' · '}<a href={l.href}>{l.label}</a></>))}</div>
+    <div class="links">{links.map((l: any, i: number) => (<>{i > 0 && ' · '}<a href={l.href}>{l.label}</a></>))}</div>
   )}
 </div>
 <style>

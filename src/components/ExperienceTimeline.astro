@@ -1,7 +1,7 @@
 ---
 import experience from '../data/experience.yaml';
 import { sortNewestFirst, assignTimelineSides } from '../lib/ordering';
-const items = assignTimelineSides(sortNewestFirst(experience, (e) => e.date));
+const items = assignTimelineSides(sortNewestFirst(experience, (e: any) => e.date));
 ---
 <div class="shead"><span class="slabel">Experience</span></div>
 <div class="tl">

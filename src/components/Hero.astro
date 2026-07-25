@@ -8,11 +8,11 @@ import { renderInline } from '../lib/inline';
     <h1 class="h1">Kyaw&nbsp;Ye&nbsp;Thu</h1>
     <p class="intro" set:html={renderInline(site.intro)} />
     <div class="contacts">
-      {site.socials.map((s) => <a href={s.href}>{s.label}</a>)}
+      {site.socials.map((s: any) => <a href={s.href}>{s.label}</a>)}
     </div>
     <div class="edu">
       <div class="edulabel">Education</div>
-      {education.map((e) => (
+      {education.map((e: any) => (
         <div class="edurow"><b>{e.degree}</b> · <span>{e.place}</span><br /><span>{e.detail}</span></div>
       ))}
     </div>
