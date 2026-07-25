@@ -9,18 +9,13 @@ import { getCollection } from 'astro:content';
 import { sortNewestFirst } from '../lib/ordering';
 
 const pubs = await getCollection('publications');
-const proj = await getCollection('research');
+// Selected Research on the homepage shows featured PUBLICATIONS only
+// (research projects live on the /research page).
 const featured = sortNewestFirst(
-  [
-    ...pubs.filter(p => p.data.featured).map(p => ({
-      badge: `Publication · ${p.data.venue}`, title: p.data.title,
-      excerpt: p.data.excerpt, links: p.data.links ?? [], date: p.data.date.toISOString(),
-    })),
-    ...proj.filter(p => p.data.featured).map(p => ({
-      badge: 'Research Project', title: p.data.title,
-      excerpt: p.data.excerpt, links: p.data.links ?? [], date: p.data.date.toISOString(),
-    })),
-  ],
+  pubs.filter(p => p.data.featured).map(p => ({
+    badge: `Publication · ${p.data.venue}`, title: p.data.title,
+    excerpt: p.data.excerpt, links: p.data.links ?? [], date: p.data.date.toISOString(),
+  })),
   x => x.date
 );
 ---
