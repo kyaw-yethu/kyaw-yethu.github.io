@@ -1,0 +1,22 @@
+---
+const { badge, title, excerpt, links = [], authors } = Astro.props;
+import { renderInline } from '../lib/inline';
+---
+<div class="item">
+  <div class="badge">{badge}</div>
+  <div class="h">{title}</div>
+  {authors && <div class="authors" set:html={renderInline(authors)} />}
+  <div class="p">{excerpt}</div>
+  {links.length > 0 && (
+    <div class="links">{links.map((l, i) => (<>{i > 0 && ' · '}<a href={l.href}>{l.label}</a></>))}</div>
+  )}
+</div>
+<style>
+  .item{padding:16px 0;border-bottom:1px solid var(--line)}
+  .badge{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .h{font-size:15.5px;font-weight:700;line-height:1.3;margin:5px 0 5px}
+  .authors{font-size:11px;color:#6a655c;margin-bottom:5px}
+  .authors :global(strong){color:var(--ink)}
+  .p{font-size:12px;line-height:1.55;color:#5a564e}
+  .links{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+</style>

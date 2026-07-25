@@ -1,0 +1,8 @@
+---
+import ResearchItem from './ResearchItem.astro';
+const { label, items } = Astro.props;
+---
+<div class="shead"><span class="slabel">{label}</span></div>
+<section>
+  {items.map((it) => <ResearchItem {...it} />)}
+</section>

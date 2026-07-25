@@ -3,11 +3,36 @@ import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import SpaceToWrite from '../components/SpaceToWrite.astro';
 import NewsRail from '../components/NewsRail.astro';
+import ResearchItem from '../components/ResearchItem.astro';
+import { getCollection } from 'astro:content';
+import { sortNewestFirst } from '../lib/ordering';
+
+const pubs = await getCollection('publications');
+const proj = await getCollection('research');
+const featured = sortNewestFirst(
+  [
+    ...pubs.filter(p => p.data.featured).map(p => ({
+      badge: `Publication · ${p.data.venue}`, title: p.data.title,
+      excerpt: p.data.excerpt, links: p.data.links ?? [], date: p.data.date.toISOString(),
+    })),
+    ...proj.filter(p => p.data.featured).map(p => ({
+      badge: 'Research Project', title: p.data.title,
+      excerpt: p.data.excerpt, links: p.data.links ?? [], date: p.data.date.toISOString(),
+    })),
+  ],
+  x => x.date
+);
 ---
 <Base title="Kyaw Ye Thu" description="Final-year CS undergraduate at KAIST — computer graphics and physical AI.">
   <div class="wrap">
     <Hero />
     <SpaceToWrite />
     <NewsRail />
+    <div class="shead"><span class="slabel">Selected Research</span></div>
+    <section>
+      {featured.map((it) => <ResearchItem {...it} />)}
+    </section>
+    <p style="text-align:center;margin:14px 0 0"><a href="/research" style="font-size:11px;letter-spacing:.07em;text-transform:uppercase">All research →</a></p>
   </div>
 </Base>
+<!-- Experience timeline is added in Task 8 (after this section). -->

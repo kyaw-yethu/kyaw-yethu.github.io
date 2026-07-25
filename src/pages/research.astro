@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import ResearchList from '../components/ResearchList.astro';
+import { getCollection } from 'astro:content';
+import { sortNewestFirst } from '../lib/ordering';
+
+const pubs = sortNewestFirst(await getCollection('publications'), p => p.data.date.toISOString())
+  .map(p => ({ badge: `Publication · ${p.data.venue}`, title: p.data.title, authors: p.data.authors, excerpt: p.data.excerpt, links: p.data.links ?? [] }));
+const proj = sortNewestFirst(await getCollection('research'), p => p.data.date.toISOString())
+  .map(p => ({ badge: 'Research Project', title: p.data.title, excerpt: p.data.excerpt, links: p.data.links ?? [] }));
+---
+<Base title="Research — Kyaw Ye Thu">
+  <div class="wrap">
+    <h1 style="font-size:30px;padding:52px 0 0">Research</h1>
+    <ResearchList label="Publications" items={pubs} />
+    <ResearchList label="Research Projects" items={proj} />
+  </div>
+</Base>
