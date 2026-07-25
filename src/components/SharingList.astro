@@ -1,0 +1,17 @@
+---
+const { label, items } = Astro.props;
+---
+<div class="shead"><span class="slabel">{label}</span></div>
+<section>
+  {items.map((it) => (
+    <div class="row">
+      <div class="rmeta">{it.date}{it.host ? ` · ${it.host}` : ''}</div>
+      <div class="rtitle">{it.href ? <a href={it.href}>{it.title}</a> : it.title}</div>
+    </div>
+  ))}
+</section>
+<style>
+  .row{padding:14px 0;border-bottom:1px solid var(--line)}
+  .rmeta{font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .rtitle{font-size:14px;font-weight:700}
+</style>

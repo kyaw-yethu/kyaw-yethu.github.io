@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import SharingList from '../components/SharingList.astro';
+import { getCollection } from 'astro:content';
+import { sortNewestFirst } from '../lib/ordering';
+
+const all = await getCollection('sharing');
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+const pick = (kind: string) => sortNewestFirst(all.filter(s => s.data.kind === kind), s => s.data.date.toISOString())
+  .map(s => ({ title: s.data.title, host: s.data.host, href: s.data.href, date: fmt(s.data.date) }));
+---
+<Base title="Sharing — Kyaw Ye Thu">
+  <div class="wrap">
+    <h1 style="font-size:30px;padding:52px 0 0">Sharing</h1>
+    <SharingList label="Teaching" items={pick('teaching')} />
+    <SharingList label="Talks" items={pick('talk')} />
+  </div>
+</Base>
