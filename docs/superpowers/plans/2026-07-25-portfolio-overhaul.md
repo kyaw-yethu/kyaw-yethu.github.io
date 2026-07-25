@@ -1236,9 +1236,15 @@ git commit -m "feat: writing index and post pages"
 
 Run:
 ```bash
-wsl -e bash -lic 'cd /home/kyawgyi/projects/kyaw-yethu.github.io && mkdir -p legacy && git mv _config.yml _config_docker.yml Gemfile Dockerfile docker-compose.yaml _data _drafts _engineeringProjects _essays _includes _layouts _pages _posts _publications _researchProjects _sass _talks _teaching markdown_generator talkmap talkmap.ipynb talkmap.py legacy/ 2>&1 | tail -5; echo done'
+wsl -e bash -lic 'cd /home/kyawgyi/projects/kyaw-yethu.github.io && mkdir -p legacy && git mv _config.yml _config_docker.yml Gemfile Dockerfile docker-compose.yaml _data _drafts _engineeringProjects _essays _includes _layouts _pages _posts _publications _researchProjects _sass _talks _teaching markdown_generator talkmap talkmap.ipynb talkmap.py vendor .bundle assets images files legacy/ 2>&1 | tail -5; echo done'
 ```
 Expected: files moved; `done` printed. (If any path is missing, drop it from the list.)
+
+> `vendor .bundle assets` MUST be moved (or removed): `astro check` scans the
+> leftover Jekyll `vendor/` Ruby bundle and reports ~16 errors in vendor JS,
+> which fails the CI `npm run check` gate (Task 12). `images/` and `files/`
+> are moved too because the assets the Astro site needs were already copied
+> into `public/` (Task 4). `tsconfig.json` already excludes `legacy/`.
 
 - [ ] **Step 2: Remove stale build/theme dirs no longer used**
 
