@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { sortNewestFirst } from '../../lib/ordering';
+const posts = sortNewestFirst(await getCollection('writing'), p => p.data.date.toISOString());
+const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+<Base title="Writing — Kyaw Ye Thu">
+  <div class="wrap">
+    <h1 style="font-size:30px;padding:52px 0 0">Writing</h1>
+    <section style="margin-top:20px">
+      {posts.map((p) => (
+        <a class="post-row" href={`/writing/${p.slug}`}>
+          <div class="pr-date">{fmt(p.data.date)}</div>
+          <div class="pr-title">{p.data.title}</div>
+          {p.data.excerpt && <div class="pr-ex">{p.data.excerpt}</div>}
+        </a>
+      ))}
+    </section>
+  </div>
+</Base>
+<style>
+  .post-row{display:block;padding:18px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  .pr-date{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .pr-title{font-size:17px;font-weight:700;margin:4px 0}
+  .pr-ex{font-size:12.5px;color:#5a564e}
+</style>

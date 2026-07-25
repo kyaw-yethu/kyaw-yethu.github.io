@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import Post from '../../layouts/Post.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('writing');
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+<Post title={post.data.title} date={fmt(post.data.date)}>
+  <Content />
+</Post>
