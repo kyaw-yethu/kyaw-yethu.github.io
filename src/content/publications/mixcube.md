@@ -4,6 +4,7 @@ authors: "Jun Seong Kim*, **Kyaw Ye Thu***, Javad Ismayilzada, Junyeong Park, Eu
 date: 2025-02-01
 venue: "C3NLP Workshop @ NAACL 2025 · Outstanding Paper Award"
 excerpt: "MixCuBe — a cross-cultural VQA benchmark built via a novel image-augmentation pipeline, used to evaluate the cultural bias of SOTA multimodal LLMs in mixed-cultural settings."
+image: "/images/research/publication-mixcube.png"
 featured: true
 links:
   - { label: "arXiv", href: "https://arxiv.org/abs/2503.16826" }

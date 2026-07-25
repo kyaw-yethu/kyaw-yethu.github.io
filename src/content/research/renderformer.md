@@ -2,6 +2,7 @@
 title: "RenderFormer with Linear Attention"
 date: 2025-01-01
 excerpt: "Bringing a transformer-based rendering pipeline (Microsoft's RenderFormer) from O(N²) to linear time complexity via Performer (FAVOR++) attention."
+image: "/images/research/project-renderformer.png"
 featured: true
 links:
   - { label: "GitHub", href: "https://github.com/kyaw-yethu/renderformer" }
