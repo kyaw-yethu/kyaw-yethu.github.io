@@ -19,6 +19,7 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <Nav />
+    <!-- Pages provide their own <div class="wrap"> (700px column). Base intentionally leaves <main> full-width. -->
     <main><slot /></main>
     <Footer />
   </body>

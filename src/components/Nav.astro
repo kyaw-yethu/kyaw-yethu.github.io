@@ -6,7 +6,7 @@ const links = [
   { href: '/sharing', label: 'Sharing' },
   { href: '/writing', label: 'Writing' },
 ];
-const isOn = (href) => href === '/' ? pathname === '/' : pathname.startsWith(href);
+const isOn = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);
 ---
 <nav class="nav">
   <div class="wrap navin">
