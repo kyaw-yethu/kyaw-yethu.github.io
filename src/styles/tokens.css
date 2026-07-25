@@ -1,0 +1,6 @@
+:root{
+  --bg:#f7f6f3; --ink:#1c1c1c; --muted:#8a857c; --line:#e4e0d8;
+  --accent:#2b8a94; --stripe:#f1efe9;
+  --col:700px;
+  --font:'Lato','Segoe UI',system-ui,sans-serif;
+}

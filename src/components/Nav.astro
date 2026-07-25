@@ -1,0 +1,28 @@
+---
+const { pathname } = Astro.url;
+const links = [
+  { href: '/', label: 'Bio' },
+  { href: '/research', label: 'Research' },
+  { href: '/sharing', label: 'Sharing' },
+  { href: '/writing', label: 'Writing' },
+];
+const isOn = (href) => href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+<nav class="nav">
+  <div class="wrap navin">
+    <a class="logo" href="/">KYAW&nbsp;YE&nbsp;THU</a>
+    <div class="links">
+      {links.map(l => <a href={l.href} class={isOn(l.href) ? 'on' : ''}>{l.label}</a>)}
+      <a class="cv" href="/files/kyawyethu-cv.pdf">CV</a>
+    </div>
+  </div>
+</nav>
+<style>
+  .nav{position:sticky;top:0;z-index:5;background:rgba(247,246,243,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .navin{display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+  .logo{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--ink)}
+  .links{display:flex;gap:20px;font-size:11px;letter-spacing:.06em;color:var(--muted);align-items:center}
+  .links a{color:var(--muted)} .links a.on{color:var(--ink)}
+  .cv{border:1px solid var(--ink);color:var(--ink)!important;padding:5px 13px;border-radius:20px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+  @media (max-width:720px){ .links{gap:13px} .logo{font-size:11px} }
+</style>
