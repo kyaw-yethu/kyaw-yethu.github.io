@@ -1,0 +1,37 @@
+---
+import site from '../data/site.yaml';
+import education from '../data/education.yaml';
+import { renderInline } from '../lib/inline';
+---
+<section class="hero">
+  <div>
+    <h1 class="h1">Kyaw&nbsp;Ye&nbsp;Thu</h1>
+    <p class="intro" set:html={renderInline(site.intro)} />
+    <div class="contacts">
+      {site.socials.map((s) => <a href={s.href}>{s.label}</a>)}
+    </div>
+    <div class="edu">
+      <div class="edulabel">Education</div>
+      {education.map((e) => (
+        <div class="edurow"><b>{e.degree}</b> · <span>{e.place}</span><br /><span>{e.detail}</span></div>
+      ))}
+    </div>
+  </div>
+  <div class="portrait"><img src="/images/bio-photo.jpg" alt="Kyaw Ye Thu" /><span>Daejeon, Korea</span></div>
+</section>
+<style>
+  .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;padding:52px 0 32px;align-items:start}
+  .h1{font-size:34px;line-height:1.08;font-weight:300;margin:0 0 18px}
+  .intro{font-size:13px;line-height:1.72;color:#3a3a3a}
+  .intro :global(a){border-bottom:1px solid rgba(43,138,148,.35)}
+  .intro :global(b),.intro :global(strong){font-weight:700}
+  .contacts{display:flex;gap:14px;margin-top:18px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .contacts a{color:var(--muted)}
+  .edu{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+  .edulabel{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  .edurow{font-size:11.5px;line-height:1.5} .edurow b{font-weight:700} .edurow span{color:#6a655c}
+  .portrait{position:relative}
+  .portrait img{width:100%;height:250px;object-fit:cover;border-radius:6px;display:block}
+  .portrait span{position:absolute;bottom:10px;left:12px;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+  @media (max-width:720px){ .hero{grid-template-columns:1fr} .portrait img{height:220px} }
+</style>

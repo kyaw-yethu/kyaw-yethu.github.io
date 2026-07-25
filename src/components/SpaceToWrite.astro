@@ -1,0 +1,10 @@
+---
+import site from '../data/site.yaml';
+import { renderInline } from '../lib/inline';
+---
+<section class="space"><p set:html={renderInline(site.note)} /></section>
+<style>
+  .space{padding:30px 0}
+  .space p{font-size:14px;line-height:1.8;color:#4a463e;font-weight:300;margin:0}
+  .space :global(em){color:var(--accent);font-style:normal}
+</style>
