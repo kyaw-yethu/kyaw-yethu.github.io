@@ -3,7 +3,7 @@ title: "History of AI Development in China and its Entrepreneurial and Innovativ
 date: 2025-06-20
 excerpt: "DeepSeek upset Silicon Valley's assumptions about Chinese AI capabilities, but the signs were there all along. This piece traces how decades of entrepreneurial grit and strategic government planning quietly set the stage for China's AI revolution, exploring some narratives in AI in the 20th century of China."
 ---
-![Chinese National Day Parade, A mass demonstration on China's National Day, October 1, outside the Gate of Heavenly Peace, Tiananmen, during the Cultural Revolution of the late 1960s.](https://kyaw-yethu.github.io/images/blogs/blog3-fig1.jpg)
+![Chinese National Day Parade, A mass demonstration on China's National Day, October 1, outside the Gate of Heavenly Peace, Tiananmen, during the Cultural Revolution of the late 1960s.](/images/blogs/blog3-fig1.jpg)
 Fig 1. Chinese National Day Parade during the Cultural Revolution of the late 1960s.
 
 # Introduction
