@@ -94,8 +94,10 @@ Single page, two stacked sections sharing the homepage type/column:
 - **Research Projects** — full list. Each: title, excerpt, links
   (GitHub, Slides). Optional teaser image per project (kept subtle).
 
-Migrated from `_publications/` (2 items) and `_researchProjects/` (3 items;
-engineering projects excluded).
+Content per the resume (source of truth as of 2026-07-25): **Publications** =
+MixCuBe (Outstanding Paper Award). **Research Projects** = Linear RenderFormer
+and Dynamic Brain Connectome. Engineering projects excluded; the legacy
+"passage retrieval" project omitted unless requested.
 
 ### 3.3 Sharing (`/sharing`)
 
@@ -234,4 +236,13 @@ during transition, or remove once parity is confirmed.)
    verify against `@fontsource/lato`).
 2. Portrait photo source (reuse `images/bio-photo.jpg` or a new one).
 3. Whether to keep old Jekyll files in `legacy/` or remove after parity.
-4. Exact News seed entries (real papers/talks vs. the sample used in mockups).
+4. **Sharing page content** — the resume has **no talks** but has **Social
+   Contribution** (ASCEND futsal, KISA, Thate Pan Hub teaching). Decide whether
+   Sharing = Teaching + Talks (from Jekyll), or is reframed as
+   Teaching + Social Contribution / Community. Affects Task 9.
+5. **Honors & Awards** (Outstanding Paper Award, KAIST Full Scholarship,
+   Whole-Burma 5th) — surfaced only via News + the publication badge for now.
+   Decide if a dedicated Awards block (Bio or Research page) is wanted.
+6. **"loreum ipsum" roles** — GLOW Lab and C&S entries have no described work
+   yet; homepage shows role+institution only until the user provides detail.
+7. **GPA** (3.53/4.3) — omitted from the public site by default; on the CV.
