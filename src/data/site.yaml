@@ -1,0 +1,15 @@
+name: "Kyaw Ye Thu"
+email: "kyawyethu@kaist.ac.kr"
+cvUrl: "/files/kyawyethu-cv.pdf"
+intro: >-
+  Final-year CS undergraduate at [KAIST](https://kaist.ac.kr), working on
+  **rendering**, physics-consistent **3D reconstruction**, and **physical AI**
+  for agents in 3D space.
+note: >-
+  Grew up in Myanmar, moved to Korea in 2022. Beyond research I teach, write,
+  and photograph — always drawn to *stories worth telling.*
+socials:
+  - { label: "Scholar", href: "https://scholar.google.com/citations?hl=en&user=fAgaSHsAAAAJ" }
+  - { label: "GitHub", href: "https://github.com/kyaw-yethu" }
+  - { label: "LinkedIn", href: "#" }
+  - { label: "Email", href: "mailto:kyawyethu@kaist.ac.kr" }

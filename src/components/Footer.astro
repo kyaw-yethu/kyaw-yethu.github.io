@@ -1,7 +1,6 @@
 ---
-// NOTE: import ... from '../data/site.yaml' requires the YAML loader added in
-// Task 3. Until then, use the fallback email directly; wire the import in Task 3.
-const email = 'kyawyethu@kaist.ac.kr';
+import siteData from '../data/site.yaml';
+const email = siteData.email;
 ---
 <footer class="foot wrap">
   <span>© 2026 Kyaw Ye Thu</span>
