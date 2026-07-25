@@ -10,4 +10,10 @@ describe('renderInline', () => {
   it('escapes stray angle brackets', () => {
     expect(renderInline('1 < 2')).toBe('1 &lt; 2');
   });
+  it('escapes stray ampersands', () => {
+    expect(renderInline('AT&T')).toBe('AT&amp;T');
+  });
+  it('preserves asterisks inside link URLs', () => {
+    expect(renderInline('[w](http://x/*a*)')).toBe('<a href="http://x/*a*">w</a>');
+  });
 });
